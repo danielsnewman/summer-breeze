@@ -115,7 +115,7 @@ body {
   padding-top: 150px;
 
   #form-wrapper {
-    border: 2px solid red;
+    border: 2px solid $light-brown;
     box-sizing: border-box;
     height: 250px;
     margin: 0 auto;
@@ -136,5 +136,5 @@ body {
 -----------------------------------------------*/
 footer{
   background-color: $light-green;
-  height:150px;
+  height:120px;
 }
