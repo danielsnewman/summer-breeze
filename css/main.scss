@@ -3,6 +3,7 @@
 -----------------------------------------------*/
 $light-brown : #ddcebb;
 $beige: #ebe2d7;
+$light-green: #AACEC4;
 
 body {
   margin: 0px;
@@ -21,42 +22,78 @@ body {
 
 .container {
   display: flex;
-  height:300px;
+  height:270px;
 }
 
 #stay {
   background-color: $light-brown;
   font-size: 100px;
   padding:30px;
-  width: 45%;
+  width: 40%;
 
   #staySquare {
-    margin: 0 auto;
+    border: 2px solid black;
     display: flex;
     height: 200px;
+    margin: 0 auto;
     width: 100%;
-    border: 2px solid black;
+
     img {
-      display: flex;
+      display: inline-block;
       height:60px;
       margin: 0 auto;
-      padding: 70px;
-      width:100;
+      padding-top:65px;
+      width:350px;
     }
   }
 }
 
-#gazebo{
+#gazebo {
   background-color: $beige;
-  padding: 15px;
+  padding: 20px;
   width: 55%;
 
-  #gazeboPic {
-    background-image: url("../../img/walkway-to-Beach.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 230px;
+  img {
+    display: flex;
+    height: 220px;
     margin: 0 auto;
     width: 100%;
+  }
+}
+#circle-container {
+  align-content: flex-start;
+  display: flex;
+  height: 350px;
+  flex-flow: row wrap;
+  padding-top: 50px;
+  justify-content: center;
+  -webkit-flex-flow: row wrap;
+
+  .circle {
+    border: 5px solid $light-green;
+    border-radius: 1000px;
+    border-spacing:10px;
+    height: 250px;
+    margin: 2.5em;
+    width: 250px;
+  }
+  .weddingPhoto {
+    background-image: url("../../img/Wedding.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  .toDoCircle{
+    background-image: url("../../img/to_do.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:205%;
+    border: none;
+  }
+  .poolsidePhoto {
+    background-image: url("../../img/poolside_1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
   }
 }
