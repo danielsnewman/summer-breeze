@@ -7,6 +7,15 @@ module.exports = function(grunt) {
           dest: 'js/build/app.min.js'
       }
     },
+    concat: {
+    dist: {
+        src: [
+            'js/libs/*.js',
+            'js/app.min.js'
+        ],
+        dest: 'js/build/production.js',
+        }
+    },
     sass: {
     dist: {
         options: {
@@ -35,8 +44,9 @@ module.exports = function(grunt) {
   }
 });
 grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.registerTask('default', ['uglify','sass','watch']);
+grunt.registerTask('default', ['uglify','concat','sass','watch']);
 
 };
