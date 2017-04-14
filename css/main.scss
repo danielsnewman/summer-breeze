@@ -110,9 +110,25 @@ body {
   height: 500px;
 }
 
-#contactUs{
-  height: 400px;
+#contactUs {
+  height: 300px;
+  padding-top: 150px;
 
+  #form-wrapper {
+    border: 2px solid red;
+    box-sizing: border-box;
+    height: 250px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 100px;
+    width: 800px;
+  }
+  label, input {
+    display: block;
+  }
+  label {
+    margin-bottom: 20px;
+  }
 }
 
 /*-----------------------------------------------
