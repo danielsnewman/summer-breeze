@@ -1,14 +1,15 @@
 /*-----------------------------------------------
 *   Base
 -----------------------------------------------*/
-$light-brown : #ddcebb;
 $beige: #ebe2d7;
-$light-green: #AACEC4;
+$light-brown : #ddcebb;
+$light-green: #aacec4;
 
 body {
   margin: 0px;
   padding: 0px;
 }
+
 /*-----------------------------------------------
 *   Hero
 -----------------------------------------------*/
@@ -20,6 +21,9 @@ body {
   height: 700px;
 }
 
+/*-----------------------------------------------
+*   Sections
+-----------------------------------------------*/
 .container {
   display: flex;
   height:270px;
@@ -63,7 +67,7 @@ body {
 #circle-container {
   align-content: flex-start;
   display: flex;
-  height: 350px;
+  height: 400px;
   flex-flow: row wrap;
   padding-top: 50px;
   justify-content: center;
@@ -83,7 +87,7 @@ body {
     background-repeat: no-repeat;
     background-size:cover;
   }
-  .toDoCircle{
+  .toDoCircle {
     background-image: url("../../img/to_do.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -96,4 +100,25 @@ body {
     background-repeat: no-repeat;
     background-size:cover;
   }
+}
+
+#testimonials {
+  background-image: url("../../img/lake-carillon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 500px;
+}
+
+#contactUs{
+  height: 400px;
+
+}
+
+/*-----------------------------------------------
+*   Footer
+-----------------------------------------------*/
+footer{
+  background-color: $light-green;
+  height:150px;
 }
