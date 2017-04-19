@@ -14,13 +14,43 @@ body {
 *   Hero
 -----------------------------------------------*/
 .hero {
-  background-image: url("../../img/house_front.jpg");
+  /*background-image: url("../../img/house_front.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover; 
+  background-size:cover; */
   height: 700px;
 }
 
+.gallery {
+  width: 100%; /* full width */
+  height: 700px;
+  background: mistyrose;
+
+  div {
+    height: 100%;
+    width: auto;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+  bottom: 12px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
 /*-----------------------------------------------
 *   Sections
 -----------------------------------------------*/
