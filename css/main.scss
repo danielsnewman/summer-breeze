@@ -11,7 +11,7 @@ body {
 }
 
 /*-----------------------------------------------
-*   Hero
+*   Hero Landing Page
 -----------------------------------------------*/
 .hero {
   height: 750px;
@@ -86,7 +86,19 @@ body {
 
 
 /*-----------------------------------------------
-*   Sections
+*   Hero Accomidations
+-----------------------------------------------*/
+
+#acc-hero {
+  background-image: url("../../img/ocean_view1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+/*-----------------------------------------------
+*   Landing Page Sections
 -----------------------------------------------*/
 .container {
   display: flex;
@@ -196,7 +208,19 @@ body {
 }
 
 /*-----------------------------------------------
-*   Footer
+*   Accomidations Sections
+-----------------------------------------------*/
+#acc-gallery-wrapper {
+  height:500px;
+  
+  h1{
+    margin: 0 auto;
+  }
+}
+
+
+/*-----------------------------------------------
+*   Landing Page Footer
 -----------------------------------------------*/
 footer{
   background-color: $light-green;
