@@ -18,18 +18,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size:cover; */
-  height: 700px;
+  height: 750px;
 }
 
 .gallery {
   width: 100%; /* full width */
-  height: 700px;
+  height: 750px;
   background: mistyrose;
 
   div {
     height: 100%;
-    width: auto;
     img {
+      background-repeat: no-repeat;
       height: 100%;
     }
   }
