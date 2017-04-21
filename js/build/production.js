@@ -47,5 +47,3 @@ const flkty = new Flickity( '.gallery', {
   wrapAround: true
   // at end of cells, wraps-around to first for infinite scrolling
 });
-
-lightGallery(document.getElementById('lightgallery'));

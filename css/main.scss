@@ -66,10 +66,10 @@ body {
   animation: float 2s 0s infinite ease-in-out;
   background: $light-green;
   display: block;
-  height: 55px;
+  height: 95px;
   margin:0 auto;
-    position: relative;
-    bottom: 100px;
+    position: absolute;
+    left: 46%;
     width: 100px;
 }
 #base:before {
@@ -212,7 +212,7 @@ body {
 -----------------------------------------------*/
 #acc-gallery-wrapper {
   height:500px;
-  
+
   h1{
     margin: 0 auto;
   }
