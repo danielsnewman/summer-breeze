@@ -4,6 +4,7 @@ Website for the Summer Breeze vacation home in Panama City Beach, Florida which 
 
 
 ## Resources
-
+<ul>
 <a href = "https://github.com/sachinchoolur/lightGallery"> lightGallery.io</a>
 <a href = "https://github.com/fullcalendar"> fullCalendar.io</a>
+</ul>
