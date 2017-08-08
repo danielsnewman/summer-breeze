@@ -10,6 +10,15 @@ body {
   padding: 0px;
 }
 
+#logo {
+  background-image: url("../../img/summer_breeze_logo.png");
+  background-repeat: no-repeat;
+  height:200px;
+  margin: 0 auto;
+  position:relative;
+  width:250px;
+}
+
 /*-----------------------------------------------
 *   Hero Landing Page
 -----------------------------------------------*/
@@ -94,6 +103,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 45px;
   height: 500px;
 }
 
