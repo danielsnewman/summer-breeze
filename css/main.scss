@@ -13,10 +13,13 @@ body {
 #logo {
   background-image: url("../../img/summer_breeze_logo.png");
   background-repeat: no-repeat;
-  height:200px;
+  height:300px;
   margin: 0 auto;
-  position:relative;
-  width:250px;
+  position: absolute;
+  top: 40px;
+  left: 40%;
+  width:350px;
+  z-index: 1;
 }
 
 /*-----------------------------------------------
@@ -24,6 +27,7 @@ body {
 -----------------------------------------------*/
 .hero {
   height: 750px;
+  position: relative;
 }
 
 .gallery {
