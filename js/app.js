@@ -30,7 +30,7 @@ const flkty = new Flickity( '.gallery', {
   // Disable if items have pixel widths, like images
   prevNextButtons: true,
   // creates and enables buttons to click to previous & next cells
-  pageDots: true,
+  pageDots: false,
   // create and enable page dots
   resize: true,
   // listens to window resize events to adjust size & positions

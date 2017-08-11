@@ -21,13 +21,12 @@ body {
 #logo {
   background-image: url("../../img/summer_breeze_logo.png");
   background-repeat: no-repeat;
-  background-size:100%;
-  height:300px;
+  height:350px;
   margin: 0 auto;
   position: absolute;
   top: 40px;
   left: 40%;
-  width:300px;
+  width:350px;
   z-index: 1;
 }
 
@@ -40,7 +39,7 @@ body {
 }
 
 .gallery {
-  width: 100%;
+  width: 100%; /* full width */
   height: 750px;
 
   div {
@@ -64,14 +63,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  position: fixed;
-  margin-top:40px;
+  position: absolute;
   width: 100%;
   background-color: mistyrose;
   z-index: 1;
   .icon {
-    max-height:50px;
-    width: 16.66%;
+    height:75px;
+    min-width: 16.66%;
     background-color: royalblue;
   }
   .icon-1 {
@@ -125,7 +123,7 @@ body {
 -----------------------------------------------*/
 .container {
   display: flex;
-  height:370px;
+  height:270px;
 }
 
 #stay {
@@ -137,16 +135,16 @@ body {
   #staySquare {
     border: 4px solid black;
     display: flex;
-    height: 290px;
+    height: 200px;
     margin: 0 auto;
     width: 100%;
 
     img {
       display: inline-block;
-      height:70px;
+      height:60px;
       margin: 0 auto;
-      padding-top:100px;
-      width:450px;
+      padding-top:65px;
+      width:350px;
     }
   }
 }
@@ -158,7 +156,7 @@ body {
 
   img {
     display: flex;
-    height: 320px;
+    height: 220px;
     margin: 0 auto;
     width: 100%;
   }
@@ -233,9 +231,9 @@ body {
     background-image: url("../../img/more_reviews.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 120px;
+    height: 175px;
     margin: 0 auto;
-    width: 240px;
+    width: 200px;
   }
 }
 
