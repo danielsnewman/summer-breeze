@@ -11,23 +11,11 @@
 -----------------------------------------------*/
 $beige: #ebe2d7;
 $light-brown : #ddcebb;
-$light-green: #aacec4;
+$light-green: #aacec4;g
 
 body {
   margin: 0px;
   padding: 0px;
-}
-
-#logo {
-  background-image: url("../../img/summer_breeze_logo.png");
-  background-repeat: no-repeat;
-  height:350px;
-  margin: 0 auto;
-  position: absolute;
-  top: 25px;
-  left: 40%;
-  width:350px;
-  z-index: 1;
 }
 
 /*-----------------------------------------------
@@ -39,7 +27,7 @@ body {
 }
 
 .gallery {
-  width: 100%; /* full width */
+  width: 100%;
   height: 750px;
 
   div {
@@ -51,6 +39,19 @@ body {
   }
 }
 
+#logo {
+  background-image: url("../../img/summer_breeze_logo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height:340px;
+  margin: 0 auto;
+  position: absolute;
+  top: 60px;
+  left: 38%;
+  width:340px;
+  z-index: 1;
+}
+
 
 /*-----------------------------------------------
 *   Navbar
@@ -60,20 +61,26 @@ nav{
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   padding:60px 20px 0 20px;
   position:absolute;
   width: 100%;
   z-index: 1;
+  #navLeft {
+    display: flex;
+    width: 35%;
+  }
+  #navRight {
+    display: flex;
+    width:35%;
+  }
   .icon {
     box-sizing: inherit;
     color: white;
     font-family: "Champagne & Limousines", "Avenir", "Helvetica";
-    font-size:28px;
-    height:75px;
-    min-width: 16.66%;
+    font-size:20px;
     padding-top: 28px;
     text-align: center;
+    width:150px;
   }
 }
 
