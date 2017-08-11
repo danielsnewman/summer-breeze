@@ -57,22 +57,23 @@ body {
 -----------------------------------------------*/
 
 .navbar{
-  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 10px;
   position: absolute;
   width: 100%;
-  background-color: mistyrose;
+  background-color: transparent;
   z-index: 1;
   .icon {
+    color: white;
+    font-family: "Champagne & Limousines", "Avenir", "Helvetica";
+    font-size:20px;
     height:75px;
     min-width: 16.66%;
     background-color: royalblue;
-  }
-  .icon-1 {
   }
 }
 
