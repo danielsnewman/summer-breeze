@@ -1,0 +1,21 @@
+/*-----------------------------------------------
+*   Breakpoints
+-----------------------------------------------*/
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+ }
+  @else if $point == laptop {
+    @media (min-width: 64em) and (max-width: 69em) { @content ; }
+ }
+   @else if $point == tablet {
+    @media (min-width: 50em) and (max-width: 63em) { @content ; }
+ }
+  @else if $point == phablet {
+    @media (min-width: 37.5em) and (max-width: 49em) { @content ; }
+ }
+ @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+ }
+}

@@ -47,3 +47,13 @@ const flkty = new Flickity( '.gallery', {
   wrapAround: true
   // at end of cells, wraps-around to first for infinite scrolling
 });
+
+window.onload = function() {
+    if (window.jQuery) {
+        // jQuery is loaded
+        alert("Yeah!");
+    } else {
+        // jQuery is not loaded
+        alert("Doesn't Work");
+    }
+}
