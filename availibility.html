@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" type= "text/css" href="css/normalize.css">
-<link rel='stylesheet' type= "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css"/>
-<link rel="stylesheet" type= "text/css" href="css/build/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel='stylesheet' href='js/libs/fullcalendar.css' />
+<link rel="stylesheet" type="text/css" href="css/build/main.css">
+<script src='js/libs/lib/jquery.min.js'></script>
+<script src='js/libs/lib/moment.min.js'></script>
+<script src='js/libs/fullcalendar.js'></script>
+<script>
+  $(document).ready(function() {
+      $('#calendar').fullCalendar({
+        themeSystem: 'bootstrap3',
+        theme: 'yeti',
+        header: {
+          left: 'prev,next today myCustomButton',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay'
+          },
+      })
+
+  });
+</script>
 </head>
 <body>
-<p></p>
+  <header id = "acc-hero">
+    <nav>
+      <div id = "navLeft">
+        <div class="icon">Accomidations</div>
+        <div class="icon"> Rates</div>
+        <div class="icon"> Area Map</div>
+      </div>
+      <div id = "navRight">
+        <div class="icon">To Do</div>
+        <div class="icon"> About</div>
+        <div class="icon"> Contact Us</div>
+      </div>
+    </nav>
+    <div id = "logo"></div>
+  </header>
+<section id = "calendarWrapper" >
 <div id="calendar"></div>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous">
-</script>
-<script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous">
-</script>
-<script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
-<script src="js/build/production.min.js" type="text/javascript"></script>
+</section>
 </body>
 </html>

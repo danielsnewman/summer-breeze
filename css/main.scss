@@ -279,6 +279,17 @@ nav{
     margin-bottom: 20px;
   }
 }
+/*-----------------------------------------------
+*   fullCalendar styles
+-----------------------------------------------*/
+#calendarWrapper{
+  padding-top: 50px;
+  height: 800px;
+  #calendar {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
 
 /*-----------------------------------------------
 *   Accomidations Sections
