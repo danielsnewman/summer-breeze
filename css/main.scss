@@ -168,7 +168,7 @@ nav{
       background-size: cover;
       background-repeat: no-repeat;
       left: 10px;
-      top: 50px;
+      top: 20px;
       -ms-transform: rotate(2deg); /* IE 9 */
       -webkit-transform: rotate(2deg); /* Safari */
       transform: rotate(2deg); /* Standard syntax */
@@ -178,14 +178,14 @@ nav{
       background-size: cover;
       background-repeat: no-repeat;
       left: 20px;
-      top: 50px;
+      top: 30px;
       -ms-transform: rotate(-15deg); /* IE 9 */
       -webkit-transform: rotate(-15deg); /* Safari */
       transform: rotate(-15deg); /* Standard syntax */
     }
     .infoPic {
       background-position: 50% 50%;
-      border:1px solid #999999;
+      border:10px solid white;
       height: 180px;
       margin: 0 auto;
       padding:8px;
@@ -315,7 +315,7 @@ nav{
 }
 
 #contactUs {
-  height: 400px;
+  height: 500px;
   padding-top: 20px;
   #contactLogo {
     background-image: url("../../img/contact_us.png");
@@ -329,22 +329,44 @@ nav{
   #form-wrapper {
     border: 2px solid $light-brown;
     box-sizing: border-box;
-    height: 250px;
+    height: 350px;
     margin: 0 auto;
     padding: 10px 0px 0px 100px;
     width: 800px;
+    #question {
+      box-sizing: border-box;
+      border-radius: 20px;
+      background-color: $light-brown;
+      font-family: "Champagne & Limousines";
+      height: 100px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      padding: 5px 20px 0px 20px;
+      position: relative;
+      right: 50px;
+      text-align: center;
+      width: 90%;
+      h2, p {
+        margin: 8px 10px;;
+      }
+    }
   }
   #contactInfo{
     float: left;
     width: 250px;
     input {
       border: .5px solid black;
-      height: 20px;
+      font-family: "Helvetica";
+      font-size: 1em;
+      padding-left: 5px;
+      height: 25px;
       width: 240px;
     }
   }
   #messageField {
     border: .5px solid black;
+    font-family: "Helvetica";
+    font-size: 1em;
     float: right;
     height: 160px;
     margin-top: 20px;
