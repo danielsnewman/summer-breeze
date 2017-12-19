@@ -268,18 +268,35 @@ nav{
     box-sizing: border-box;
     height: 250px;
     margin: 0 auto;
-    padding-top: 10px;
-    padding-left: 100px;
+    padding: 10px 0px 0px 100px;
     width: 800px;
   }
   #contactInfo{
     float: left;
-    width: 70px;
+    width: 250px;
+    input {
+      border: .5px solid black;
+      height: 20px;
+      width: 240px;
+    }
   }
-  label, input {
-    display: block;
+  #messageField {
+    border: .5px solid black;
+    float: right;
+    height: 160px;
+    margin-top: 20px;
+    resize: none;
+    width: 350px;
+  }
+  #message {
+    font-family: "Champagne & Limousines";
+    position: relative;
+    float: right;
+    right: 355px;
   }
   label {
+    display: block;
+    font-family: "Champagne & Limousines";
     margin-bottom: 20px;
   }
 }
