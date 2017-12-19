@@ -137,11 +137,12 @@ nav{
 -----------------------------------------------*/
 #aboutUs {
   height: 660px;
-  padding: 60px 0px 0px 40px;
+  padding: 60px 0px 0px 50px;
   #sb-Info {
     box-sizing: border-box;
     border-radius: 20px;
     background-color: $beige;
+    display: flex;
     float:left;
     font-family: "Champagne & Limousines";
     font-size: 1.1em;
@@ -155,39 +156,41 @@ nav{
     overflow:hidden;
     #infoPic1 {
       background-image: url("../../img/ocean_view1.jpg");
-      background-size: 100%;
-      left: 60px;
-      top: 50px;
+      background-size: cover;
+      left: 20px;
+      top: 30px;
       -ms-transform: rotate(15deg); /* IE 9 */
       -webkit-transform: rotate(15deg); /* Safari */
       transform: rotate(15deg); /* Standard syntax */
     }
     #infoPic2 {
       background-image: url("../../img/beach-sunset.jpg");
-      background-size: 100%;
+      background-size: cover;
       background-repeat: no-repeat;
-      left: 60px;
-      top: 80px;
+      left: 10px;
+      top: 50px;
       -ms-transform: rotate(2deg); /* IE 9 */
       -webkit-transform: rotate(2deg); /* Safari */
       transform: rotate(2deg); /* Standard syntax */
     }
     #infoPic3 {
       background-image: url("../../img/Meeting House.jpg");
-      background-size: 100%;
+      background-size: cover;
       background-repeat: no-repeat;
-      left: 60px;
-      top: 130px;
+      left: 20px;
+      top: 50px;
       -ms-transform: rotate(-15deg); /* IE 9 */
       -webkit-transform: rotate(-15deg); /* Safari */
       transform: rotate(-15deg); /* Standard syntax */
     }
     .infoPic {
+      background-position: 50% 50%;
       border:1px solid #999999;
-      height: 130px;
+      height: 180px;
+      margin: 0 auto;
       padding:8px;
       position: relative;
-      width: 250px;
+      width: 260px;
     }
   }
 }
