@@ -17,6 +17,7 @@
   "author": "Daniel Newman",
   "license": "ISC",
   "dependencies": {
+    "mongoose": "^4.13.7",
     "normalize.css": "^6.0.0"
   }
 }
