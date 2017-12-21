@@ -4,16 +4,16 @@ module.exports = function(grunt) {
     concat: {
     dist: {
         src: [
-            'js/libs/*.js',
-            'js/app.js'
+            'public/js/libs/*.js',
+            'public/js/app.js'
         ],
         dest: 'js/build/production.js',
         }
     },
     uglify: {
         build: {
-            src: 'js/build/production.js',
-            dest: 'js/build/production.min.js'
+            src: 'public/js/build/production.js',
+            dest: 'public/js/build/production.min.js'
         }
     },
     sass: {
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             style: 'compressed'
         },
         files: {
-            'css/build/main.css': 'css/main.scss'
+            'public/css/build/main.css': 'public/css/main.scss'
         }
       }
     },
