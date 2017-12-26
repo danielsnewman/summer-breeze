@@ -361,6 +361,18 @@ nav{
       margin: 0 auto;
       width: auto;
     }
+    input[type=submit] {
+      background:$light-brown;
+      border:0 none;
+      cursor:pointer;
+      height: 40px;
+      font-family: "Champagne & Limousines";
+      font-size: 1.3em;
+      right: 5px;
+      position: relative;
+      padding:0px;
+      width: 100%;
+    }
     #formLeft {
       box-sizing: border-box;
       float: left;
@@ -369,9 +381,9 @@ nav{
     #formRight {
       box-sizing: border-box;
       float: right;
-      width: 55%;
+      width: 58%;
       #message{
-        margin-bottom: 2px; 
+        margin-bottom: 2px;
       }
     }
     .userInfo {
@@ -390,6 +402,7 @@ nav{
     font-size: 1em;
     float: right;
     height: 132px;
+    margin-bottom: 10px;
     resize: none;
     width: 100%;
   }
