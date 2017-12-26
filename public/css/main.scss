@@ -329,9 +329,9 @@ nav{
   #form-wrapper {
     border: 2px solid $light-brown;
     box-sizing: border-box;
-    height: 350px;
+    height: 380px;
     margin: 0 auto;
-    padding: 10px 0px 0px 100px;
+    padding: 10px 0px 0px 60px;
     width: 800px;
     #question {
       box-sizing: border-box;
@@ -343,7 +343,7 @@ nav{
       margin-bottom: 15px;
       padding: 5px 20px 0px 20px;
       position: relative;
-      right: 50px;
+      right: 40px;
       text-align: center;
       width: 90%;
       h2, p {
@@ -352,15 +352,36 @@ nav{
     }
   }
   #contactInfo{
+    border: none;
     float: left;
+    padding: 0px;
     width: 650px;
-    input {
+    form {
+      height: auto;
+      margin: 0 auto;
+      width: auto;
+    }
+    #formLeft {
+      box-sizing: border-box;
+      float: left;
+      width: 40%;
+    }
+    #formRight {
+      box-sizing: border-box;
+      float: right;
+      width: 55%;
+      #message{
+        margin-bottom: 2px; 
+      }
+    }
+    .userInfo {
       border: .5px solid black;
       font-family: "Helvetica";
       font-size: 1em;
+      margin-bottom: 8px;
       padding-left: 5px;
       height: 25px;
-      width: 40px;
+      width: 250px;
     }
   }
   #messageField {
@@ -368,21 +389,17 @@ nav{
     font-family: "Helvetica";
     font-size: 1em;
     float: right;
-    height: 160px;
-    margin-top: 20px;
+    height: 132px;
     resize: none;
-    width: 350px;
+    width: 100%;
   }
-  #message {
-    font-family: "Champagne & Limousines";
-    position: relative;
-    float: right;
-    right: 355px;
-  }
+
   label {
     display: block;
+    position:relative;
     font-family: "Champagne & Limousines";
-    margin-bottom: 20px;
+    position: relative;
+    width:50px;
   }
 }
 /*-----------------------------------------------

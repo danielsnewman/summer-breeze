@@ -75,13 +75,19 @@
       <h2> Still have a question?</h2>
       <p> Send us a message below and we'll get back to you shortly!</p>
     </div>
-    <form id = "contactInfo" method= "POST">
-    <label> Name <input class = "userInfo" id="name" name="name" type="text" /></label>
-    <label> Email <input class = "userInfo" id="email" name="email" type="text" /></label>
-    <label> Phone <input class = "userInfo" id="phone" name="phone" type="text" /></label>
-    <label id = "message"> Message </label><textarea id = "messageField"></textarea>
-    <input type="submit">
+    <fieldset id = "contactInfo">
+    <form  method= "post">
+      <div id = "formLeft">
+      <label> Name </label> <input class = "userInfo" id="name" name="name" type="text"/>
+      <label> Email</label> <input class = "userInfo" id="email" name="email" type="text"/>
+      <label> Phone </label><input class = "userInfo" id="phone" name="phone" type="text"/>
+      </div>
+      <div id = "formRight">
+      <label id = "message"> Message </label><textarea id = "messageField" type="text"></textarea>
+      <input type="submit">
+      <div>
     </form>
+    </fieldset>
   </div>
 </section>
 <footer>
