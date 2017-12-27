@@ -67,17 +67,17 @@ nav{
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  padding:60px 20px 0 20px;
+  padding:60px 20px 0 30px;
   position:absolute;
   width: 100%;
   z-index: 1;
   #navLeft {
     display: flex;
-    width: 35%;
+    width: 60%;
   }
   #navRight {
     display: flex;
-    width:35%;
+    width:30%;
   }
   .icon {
     box-sizing: inherit;
@@ -86,7 +86,7 @@ nav{
     font-size:22px;
     padding-top: 28px;
     text-align: center;
-    width:130px;
+    width:157px;
   }
 }
 
@@ -136,62 +136,23 @@ nav{
 *   About Us
 -----------------------------------------------*/
 #aboutUs {
-  height: 660px;
-  padding: 60px 0px 0px 50px;
+  box-sizing: border-box;
+  background-image: url("../../img/dune_34 copy.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  padding-top: 55px;
   #sb-Info {
+    color: white;
     box-sizing: border-box;
-    border-radius: 20px;
-    background-color: $beige;
-    display: flex;
-    float:left;
     font-family: "Champagne & Limousines";
-    font-size: 1.1em;
+    font-size: 1.125em;
     height: auto;
-    padding: 40px;
-    width: 640px;
-  }
-  #infoPicWrapper {
-    box-sizing: border-box;
-    height: 100%;
-    overflow:hidden;
-    #infoPic1 {
-      background-image: url("../../img/ocean_view1.jpg");
-      background-size: cover;
-      left: 20px;
-      top: 30px;
-      -ms-transform: rotate(15deg); /* IE 9 */
-      -webkit-transform: rotate(15deg); /* Safari */
-      transform: rotate(15deg); /* Standard syntax */
-    }
-    #infoPic2 {
-      background-image: url("../../img/beach-sunset.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      left: 10px;
-      top: 20px;
-      -ms-transform: rotate(2deg); /* IE 9 */
-      -webkit-transform: rotate(2deg); /* Safari */
-      transform: rotate(2deg); /* Standard syntax */
-    }
-    #infoPic3 {
-      background-image: url("../../img/Meeting House.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      left: 20px;
-      top: 30px;
-      -ms-transform: rotate(-15deg); /* IE 9 */
-      -webkit-transform: rotate(-15deg); /* Safari */
-      transform: rotate(-15deg); /* Standard syntax */
-    }
-    .infoPic {
-      background-position: 50% 50%;
-      border:10px solid white;
-      height: 180px;
-      margin: 0 auto;
-      padding:8px;
-      position: relative;
-      width: 260px;
-    }
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    width: 960px;
   }
 }
 
@@ -401,8 +362,8 @@ nav{
     font-family: "Helvetica";
     font-size: 1em;
     float: right;
-    height: 132px;
-    margin-bottom: 10px;
+    height: 80px;
+    margin-bottom: 8px;
     resize: none;
     width: 100%;
   }
@@ -420,10 +381,10 @@ nav{
 -----------------------------------------------*/
 #calendarWrapper{
   padding-top: 50px;
+  padding-left: 20px;
   height: 800px;
   #calendar {
-    margin: 0 auto;
-    width: 85%;
+    width: 60%;
   }
 }
 
