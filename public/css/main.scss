@@ -24,6 +24,11 @@ body {
   padding: 0px;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 /*-----------------------------------------------
 *   Hero Landing Page
 -----------------------------------------------*/
@@ -72,8 +77,17 @@ nav{
   width: 100%;
   z-index: 1;
   a {
-    color: white;
-    text-decoration: none;
+    border-bottom: 2px solid
+    rgba(255,255,255, 0);
+    -webkit-transition: border 500ms ease;
+    -moz-transition: border 500ms ease;
+    -ms-transition: border 500ms ease;
+    -o-transition: border 500ms ease;
+    transition: border 500ms ease;
+  }
+  a:hover {
+      border-bottom: 2px solid
+      rgba(255,255,255, 1);
   }
   #navLeft {
     display: flex;
@@ -117,7 +131,7 @@ nav{
   background-size:100%;
   display: block;
   height: 250px;
-  margin:0 auto;
+  margin: 0 auto;
   position: absolute;
   left: 40%;
   width: 250px;
@@ -407,6 +421,7 @@ nav{
     padding-top: 100px;
     width: 40%;
     table {
+      color: black;
       font-family: "Champagne & Limousines";
       margin: 0 auto;
       width: 80%;
