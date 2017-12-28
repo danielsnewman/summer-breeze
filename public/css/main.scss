@@ -71,6 +71,10 @@ nav{
   position:absolute;
   width: 100%;
   z-index: 1;
+  a {
+    color: white;
+    text-decoration: none;
+  }
   #navLeft {
     display: flex;
     width: 60%;
@@ -307,7 +311,7 @@ nav{
       right: 40px;
       text-align: center;
       width: 90%;
-      h2, p {
+      h2, h4 {
         margin: 8px 10px;;
       }
     }
