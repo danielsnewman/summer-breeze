@@ -124,7 +124,7 @@ nav{
 -----------------------------------------------*/
 
 #acc-hero {
-  background-image: url("../../img/ocean_view1.jpg");
+  background-image: url("../../img/beach-sunset.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -380,13 +380,46 @@ nav{
 *   fullCalendar styles
 -----------------------------------------------*/
 #calendarWrapper{
+  box-sizing: border-box;
+  float: left;
   padding-top: 50px;
-  padding-left: 20px;
+  padding-left: 30px;
   height: 800px;
+  width:60%;
   #calendar {
-    width: 60%;
+    width: 100%;
   }
 }
+
+/*-----------------------------------------------
+*   Rates & Amenities
+-----------------------------------------------*/
+#rates-calendar-wrapper {
+  height: 700px;
+  #tableWrapper {
+    box-sizing: border-box;
+    height: 650px;
+    float: right;
+    padding-top: 100px;
+    width: 40%;
+    table {
+      font-family: "Champagne & Limousines";
+      margin: 0 auto;
+      width: 80%;
+    }
+    td, th {
+      border: 1px solid black;
+      font-size: 1.4em;
+      height: 100px;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: $beige;
+    }
+  }
+}
+
 
 /*-----------------------------------------------
 *   Accomidations Sections
