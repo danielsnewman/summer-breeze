@@ -5,9 +5,11 @@
 <link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/yeti/bootstrap.min.css">
 <link rel='stylesheet' href='js/libs/fullcalendar.css'>
 <link rel="stylesheet" type="text/css" href="css/build/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src='js/libs/lib/jquery.min.js'></script>
 <script src='js/libs/lib/moment.min.js'></script>
 <script src='js/libs/fullcalendar.js'></script>
+<script src='js/angularEstimator.js'></script>
 <script>
   $(document).ready(function() {
       $('#calendar').fullCalendar({
@@ -78,6 +80,30 @@
   </tr>
 </table>
 </div>
+<div id = "additionalInfo">
+  <h3>Additional information about rental rates</h3>
+  <h3>Fees:</h3>
+    <ul>
+      <li> Refundable damage deposit: $500</li>
+      <li> Cleaning Fee: $245 </li>
+      <li> Tax rate: 11.5% <li>
+    </ul>
+  <h3> Additional Notes </h3>
+  <ul>
+    <li> Complementary beach chairs with an umbrella for two will be set up for you every day adjacent to Dune Walkover #7 between March 1 and September 30.</li>
+    <li> Must be 30 years old to rent.</li>
+    <li> Rates are based on a weekly rate that run Saturday through Saturday.</li>
+    <li> Check in time : 4pm </li>
+    <li> Check out time : 10am </li>
+  </ul>
+</div>
+<div id= "estimator-wrapper" ng-app="myApp" ng-controller="Ctrl">
+    <h3> Price Estimator </h3>
+    <p> Pick a season</p>
+    <select ng-model="productList" ng-options="product as product.label for product in products"></select>
+    <h3> Estimated total with tax and cleaning fees:</h3>
+    <h2>{{'$' + Math.floor((productList.value + 245) * 1.011)}}</h2>
+<div>
 </section>
 <footer>
 </footer>

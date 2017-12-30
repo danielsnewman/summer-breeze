@@ -18,6 +18,7 @@
 $beige: #ebe2d7;
 $light-brown : #ddcebb;
 $light-green: #aacec4;
+$site-font: "Champagne & Limousines";
 
 body {
   margin: 0px;
@@ -57,7 +58,7 @@ a {
   height:330px;
   margin: 0 auto;
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: 36%;
   width:330px;
   z-index: 1;
@@ -69,10 +70,13 @@ a {
 -----------------------------------------------*/
 
 nav{
+  background-color: $light-green;
   box-sizing: border-box;
+  opacity: .7;
   display: flex;
+  height: 140px;
   justify-content: space-between;
-  padding:60px 20px 0 30px;
+  padding:40px 20px 0 30px;
   position:absolute;
   width: 100%;
   z-index: 1;
@@ -160,7 +164,7 @@ nav{
   background-repeat: no-repeat;
   background-size: cover;
   height: 550px;
-  padding-top: 55px;
+  padding-top: 40px;
   #sb-Info {
     color: white;
     box-sizing: border-box;
@@ -169,7 +173,7 @@ nav{
     height: auto;
     margin: 0 auto;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     width: 960px;
   }
 }
@@ -402,7 +406,7 @@ nav{
   float: left;
   padding-top: 50px;
   padding-left: 30px;
-  height: 800px;
+  height: 600px;
   width:60%;
   #calendar {
     width: 100%;
@@ -416,10 +420,10 @@ nav{
 *   Rates & Amenities
 -----------------------------------------------*/
 #rates-calendar-wrapper {
-  height: 700px;
+  height: 1300px;
   #tableWrapper {
     box-sizing: border-box;
-    height: 650px;
+    height: 610px;
     float: right;
     padding-top: 100px;
     width: 40%;
@@ -429,7 +433,13 @@ nav{
       margin: 0 auto;
       width: 80%;
     }
-    td, th {
+    th {
+      border: 1px solid black;
+      font-size: 2em;
+      height: 100px;
+      text-align: center;
+    }
+    td {
       border: 1px solid black;
       font-size: 1.4em;
       height: 100px;
@@ -438,6 +448,40 @@ nav{
     }
     tr:nth-child(even) {
       background-color: $beige;
+    }
+  }
+  #additionalInfo {
+    color: black;
+    background-color: $beige;
+    border:10px solid $light-brown;
+    font-family: "Champagne & Limousines";
+    float:left;
+    margin-left: 30px;
+    padding: 20px;
+    height: auto;
+    width: 600px;
+    h3 {
+      text-decoration : underline;
+    }
+    ul {
+      list-style: none;
+      font-size: 1.3em;
+    }
+    li:before {
+      content: "-";
+    }
+  }
+  #estimator-wrapper {
+    color: black;
+    border: 10px solid $light-green;
+    float: right;
+    font-family: "Champagne & Limousines";
+    height: 500px;
+    margin-right: 40px;
+    text-align: center;
+    width: 400px;
+    h3 {
+      text-decoration : underline;
     }
   }
 }
