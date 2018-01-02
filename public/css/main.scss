@@ -480,8 +480,22 @@ nav{
     margin-right: 40px;
     text-align: center;
     width: 400px;
+    label, p {
+      text-decoration: underline;
+      font-size: 1.3em;
+    }
     h3 {
       text-decoration : underline;
+    }
+    #weekNumber {
+      width: 50px;
+    }
+    select {
+      height: 30px;
+      text-align: center;
+      text-align-last: center;
+      width:200px;
+      text-align: -webkit-center;
     }
   }
 }

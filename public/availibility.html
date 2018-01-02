@@ -4,8 +4,10 @@
 <title>Summer Breeze | Availibility </title>
 <link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/yeti/bootstrap.min.css">
 <link rel='stylesheet' href='js/libs/fullcalendar.css'>
+<link rel='stylesheet' href='js/libs/angular-stepper.min.css'>
 <link rel="stylesheet" type="text/css" href="css/build/main.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src='js/libs/angular-stepper.min.js'></script>
 <script src='js/libs/lib/jquery.min.js'></script>
 <script src='js/libs/lib/moment.min.js'></script>
 <script src='js/libs/fullcalendar.js'></script>
@@ -97,13 +99,22 @@
     <li> Check out time : 10am </li>
   </ul>
 </div>
-<div id= "estimator-wrapper" ng-app="myApp" ng-controller="Ctrl">
-    <h3> Price Estimator </h3>
-    <p> Pick a season</p>
-    <select ng-model="productList" ng-options="product as product.label for product in products"></select>
-    <h3> Estimated total with tax and cleaning fees:</h3>
-    <h2>{{'$' + Math.floor((productList.value + 245) * 1.011)}}</h2>
-<div>
+<div id= "estimator-wrapper" ng-app="priceEstimator">
+    <h3> Price Estimator</h3>
+    <h4> (with fees):</h4>
+    <div ng-controller="weekStepper">
+      <div  ng-controller="seasonSelector">
+        <h2>{{ seasonsList.value }}</h2>
+        <p> Select a season:</p>
+        <select ng-model="seasonsList" ng-init:'seasonsList.seasons[0]' ng-options="season as season.label for season in seasons"></select>
+      </div>
+      <label>Number of weeks:</label>
+        <div min="minRating" max="maxRating" ng-model="rating" rn-stepper></div>
+    <div ng-controller="dayStepper">
+      <label>Number of days:</label>
+        <div min="minRating" max="maxRating" ng-model="rating" rn-stepper></div>
+      </div>
+  </div>
 </section>
 <footer>
 </footer>
