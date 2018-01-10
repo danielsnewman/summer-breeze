@@ -87,7 +87,7 @@
       <div ng-controller="dayStepper" >
         <div ng-controller="seasonSelector">
           <h2> {{ dayRates[0].value }} </h2>
-          <h2> ${{ (seasonsList.value * weeks) + day }} </h2>
+          <h2> ${{ (seasonsList.weekRate * weeks) + (seasonsList.dayRate * day) }} </h2>
           <p> Select a season:</p>
           <select ng-model="seasonsList" ng-options="season as season.label for season in seasons"></select>
         </div>
