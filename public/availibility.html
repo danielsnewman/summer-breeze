@@ -84,10 +84,10 @@
     <h3> Price Estimator</h3>
     <h4> (with fees):</h4>
     <div ng-controller="weekStepper">
-      <div ng-controller="dayStepper">
+      <div ng-controller="dayStepper" >
         <div ng-controller="seasonSelector">
-          <h2> {{ $parent.weekValues.fallWinter }}</h2>
-          <h2>${{ seasonsList.value + $parent.weekValues.fallWinter  }}</h2>
+          <h2> {{ dayRates[0].value }} </h2>
+          <h2> ${{ (seasonsList.value * weeks) + day }} </h2>
           <p> Select a season:</p>
           <select ng-model="seasonsList" ng-options="season as season.label for season in seasons"></select>
         </div>
