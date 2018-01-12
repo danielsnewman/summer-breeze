@@ -3,6 +3,7 @@
 <head>
 <title>Summer Breeze | Availibility </title>
 <link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/yeti/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
 <link rel='stylesheet' href='js/libs/fullcalendar.css'>
 <link rel='stylesheet' href='js/libs/angular-stepper.min.css'>
 <link rel="stylesheet" type="text/css" href="css/build/main.css">
@@ -82,12 +83,13 @@
 </div>
 <div id= "estimator-wrapper" ng-app="priceEstimator">
     <h3> Price Estimator</h3>
-    <h4> (with fees):</h4>
+    <h4> (additional fees included)</h4>
     <div ng-controller="weekStepper">
       <div ng-controller="dayStepper" >
         <div ng-controller="seasonSelector">
-          <h2> {{ dayRates[0].value }} </h2>
-          <h2> ${{ (seasonsList.weekRate * weeks) + (seasonsList.dayRate * day) }} </h2>
+          <div id="numberContainer">
+          <ng-odometer value= "(seasonsList.weekRate * weeks) + (seasonsList.dayRate * day)"></ng-odometer>
+          </div>
           <p> Select a season:</p>
           <select ng-model="seasonsList" ng-options="season as season.label for season in seasons"></select>
         </div>
@@ -101,13 +103,18 @@
 <footer>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
 <script src='js/libs/angular-stepper.min.js'></script>
+<script src='js/libs/angular-odometer.min.js'></script>
 <script src='js/libs/lib/jquery.min.js'></script>
 <script src='js/libs/lib/moment.min.js'></script>
 <script src='js/libs/fullcalendar.js'></script>
 <script src='js/angularEstimator.js'></script>
 <script>
   $(document).ready(function() {
+    window.odometerOptions = {
+      format: '(,ddd).ddd'
+    };
       $('#calendar').fullCalendar({
         themeSystem: 'bootstrap3',
         header: {
@@ -116,7 +123,8 @@
           right: 'month,agendaWeek,agendaDay'
           },
           textColor: '#FFF'
-      })
+      });
+
   });
 </script>
 </body>

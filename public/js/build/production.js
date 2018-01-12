@@ -1,3 +1,6 @@
+/*! angular-odometer - v0.0.8 - 2014-10-17
+* Copyright (c) 2014 ; Licensed  */
+"use strict";var ngOdometer=angular.module("ngOdometer",[]);ngOdometer.directive("ngOdometer",function(){return{restrict:"E",scope:{endValue:"=value"},link:function(a,b){var c=new Odometer({el:b[0],value:0,format:"( ddd).dddd"});a.$watch("endValue",function(){c.update(a.endValue)})}}});
 /*! angular-stepper - v0.0.3 - 2016-01-08
 * Copyright (c) Julien Bouquillon [revolunet] 2016; Licensed  */
 angular.module('revolunet.stepper', [])

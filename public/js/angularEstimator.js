@@ -1,4 +1,4 @@
-const app = angular.module('priceEstimator', ['revolunet.stepper']);
+const app = angular.module('priceEstimator', ['revolunet.stepper','ngOdometer']);
 
 app.factory('seasonFactory', () => {
   let factory = {};

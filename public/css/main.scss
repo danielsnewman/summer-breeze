@@ -498,6 +498,21 @@ nav{
       text-align: -webkit-center;
     }
   }
+
+  .odometer .odometer-inside:before {
+    content: "$"
+  }
+  .odometer {
+    font-size: 40px;
+    color: black;
+}
+
+.odometer .odometer-inside:before {
+    display: inline-block;
+    vertical-align: sup;
+    font-size: .85em;
+    margin-right: .12em
+}
 }
 
 
