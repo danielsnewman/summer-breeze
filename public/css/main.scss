@@ -15,10 +15,23 @@
 /*-----------------------------------------------
 *   Base
 -----------------------------------------------*/
+
 $beige: #ebe2d7;
 $light-brown : #ddcebb;
 $light-green: #aacec4;
 $site-font: "Champagne & Limousines";
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  font-family: $site-font, "Helvetica", sans-serif;
+}
 
 body {
   margin: 0px;
@@ -72,7 +85,7 @@ a {
 nav{
   background-color: $light-green;
   box-sizing: border-box;
-  opacity: .7;
+  opacity: .95;
   display: flex;
   height: 140px;
   justify-content: space-between;
@@ -81,6 +94,7 @@ nav{
   width: 100%;
   z-index: 1;
   a {
+    color: white !important;
     border-bottom: 2px solid
     rgba(255,255,255, 0);
     -webkit-transition: border 500ms ease;
@@ -146,11 +160,10 @@ nav{
 -----------------------------------------------*/
 
 #acc-hero {
-  background-image: url("../../img/beach-sunset.jpg");
+  background-image: url("../../img/dune-walkover.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 45px;
   height: 500px;
 }
 
@@ -200,6 +213,7 @@ nav{
     width: 100%;
 
     img {
+      box-sizing: content-box;
       display: inline-block;
       height:60px;
       margin: 0 auto;
@@ -212,7 +226,7 @@ nav{
 #gazebo {
   background-color: $beige;
   padding: 20px;
-  width: 55%;
+  width: 65%;
 
   img {
     display: flex;
@@ -498,21 +512,24 @@ nav{
       text-align: -webkit-center;
     }
   }
-
-  .odometer .odometer-inside:before {
-    content: "$"
-  }
   .odometer {
     font-size: 40px;
     color: black;
-}
-
-.odometer .odometer-inside:before {
+  }
+  .odometer .odometer-inside:before {
+    content: "$";
     display: inline-block;
     vertical-align: sup;
     font-size: .85em;
     margin-right: .12em
-}
+  }
+  //Safari Animation -Webkit Fixes
+  .odometer-ribbon-inner {
+    -webkit-backface-visibility: visible !important;
+  }
+  .odometer-value {
+    -webkit-transform: none !important;
+  }
 }
 
 
