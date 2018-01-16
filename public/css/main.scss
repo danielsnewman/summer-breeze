@@ -39,7 +39,7 @@ body {
 }
 
 a {
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 
@@ -349,6 +349,7 @@ nav{
     }
   }
   #contactInfo{
+    font-family: $site-font;
     border: none;
     float: left;
     padding: 0px;
@@ -384,16 +385,18 @@ nav{
       }
     }
     .userInfo {
+      color: black;
       border: .5px solid black;
       font-family: "Helvetica";
       font-size: 1em;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       padding-left: 5px;
       height: 25px;
       width: 250px;
     }
   }
   #messageField {
+    color: black;
     border: .5px solid black;
     font-family: "Helvetica";
     font-size: 1em;
@@ -406,8 +409,10 @@ nav{
 
   label {
     display: block;
+    color: black;
     position:relative;
-    font-family: "Champagne & Limousines";
+    font-family: $site-font;
+    font-size: 1em;
     position: relative;
     width:50px;
   }
@@ -434,7 +439,7 @@ nav{
 *   Rates & Amenities
 -----------------------------------------------*/
 #rates-calendar-wrapper {
-  height: 1300px;
+  height: 1200px;
   #tableWrapper {
     box-sizing: border-box;
     height: 610px;
@@ -530,6 +535,65 @@ nav{
   .odometer-value {
     -webkit-transform: none !important;
   }
+}
+
+/*-----------------------------------------------
+*   Book Your Trip Section
+-----------------------------------------------*/
+
+#bookYourTrip {
+  background-image:url("../../img/carillon-overhead-2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height:500px;
+  padding-top: 20px;
+  width: 100%;
+  #bookText {
+    background-image:url("../../img/book_your_trip.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    height: 100px;
+    width:60%;
+  }
+  #bookingForms {
+    margin: 0 auto;
+    height: auto;
+    width: 20%;
+  }
+  #bookingFields {
+    font-family: $site-font;
+    height: auto;
+    margin-bottom:10px;
+  }
+  label, input, textarea {
+    display: block;
+    width: 100%;
+  }
+  label {
+    float: left;
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  label:hover {
+    text-decoration: none;
+    color: white;
+  }
+  input {
+    color: black !important;
+    font-size: 1.2em;
+    height: 30px;
+    padding-left: 5px;
+  }
+  input[type=submit] {
+    font-family: $site-font;
+    font-size: 1.3em;
+    height: 40px;
+    background-color: $light-green;
+    color: white;
+  }
+
+
 }
 
 

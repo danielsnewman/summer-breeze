@@ -4,9 +4,9 @@ app.factory('seasonFactory', () => {
   let factory = {};
   let seasons = [
     { label:'-', weekRate: 0, dayRate: 0},
-    { label:'Fall/Winter', weekRate: 2100, dayRate: 300 },
-    { label: 'Spring', weekRate: 2900, dayRate: 400 },
-    { label: 'Summer', weekRate: 3995, dayRate: 500 }
+    { label:'Fall/Winter (Oct 23-March 3)', weekRate: 2100, dayRate: 300 },
+    { label: 'Spring (March 4-May 12)', weekRate: 2900, dayRate: 400 },
+    { label: 'Summer (May 13-Aug 11)', weekRate: 3995, dayRate: 500 }
   ];
   factory.getSeasons = () => {
     return seasons;
