@@ -145,26 +145,34 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
 <script src='js/libs/lib/jquery.min.js'></script>
 <script src='js/libs/lib/moment.min.js'></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <script src='js/libs/angular-stepper.min.js'></script>
 <script src='js/libs/angular-odometer.min.js'></script>
 <script src='js/libs/fullcalendar.js'></script>
+<script src='js/libs/gcal.js'></script>
 <script src='js/angularEstimator.js'></script>
+<script src='js/config.js'></script>
 <script>
   $(document).ready(function() {
+    var googleKeys = config.googleCalendarApiKey;
+    var googleEvents = config.events.googleCalendarId;
     window.odometerOptions = {
       format: '(,ddd).ddd'
     };
-  $('#calendar').fullCalendar({
-    themeSystem: 'bootstrap3',
-    header: {
-      left: 'prev,next today myCustomButton',
-      center: 'title',
-      right: 'month,agendaWeek,agendaDay'
-      },
-      textColor: '#FFF'
-  });
     $('input[name="dateRange"]').daterangepicker();
+    $('#calendar').fullCalendar({
+      themeSystem: 'bootstrap3',
+      header: {
+        left: 'prev,next today myCustomButton',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      textColor: '#FFF',
+      googleCalendarApiKey: googleKeys,
+        events: {
+          googleCalendarId: googleEvents
+        }
+    });
   });
 </script>
 </body>
