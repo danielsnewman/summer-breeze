@@ -36,9 +36,9 @@
   </tr>
   <tr>
     <td>
-    <b>Fall/Winter<b>
+    <b>Fall/Winter <script>document.write(new Date().getFullYear())</script></b>
     <br>
-    Oct 23 - Mar 3, 2018
+    Oct 23 - Mar 3, <script>document.write(new Date().getFullYear())</script>
     <br>
     4 night min stay
     </td>
@@ -46,9 +46,9 @@
   </tr>
   <tr>
     <td>
-    <b>Spring 2018</b>
+    <b>Spring <script>document.write(new Date().getFullYear())</script></b>
     <br>
-    Mar 4 - May 12, 2018
+    Mar 4 - May 12, <script>document.write(new Date().getFullYear())</script>
     <br>
     4 night min stay
     </td>
@@ -56,9 +56,9 @@
   </tr>
   <tr>
     <td>
-    <b>Summer 2018</b>
+    <b>Summer <script>document.write(new Date().getFullYear())</script></b>
     <br>
-    May 13 - Aug 11, 2018
+    May 13 - Aug 11, <script>document.write(new Date().getFullYear())</script>
     <br>
     7 night min stay
     </td>
@@ -154,8 +154,8 @@
 <script src='js/config.js'></script>
 <script>
   $(document).ready(function() {
-    var googleKeys = config.googleCalendarApiKey;
-    var googleEvents = config.events.googleCalendarId;
+    let googleKeys = config.googleCalendarApiKey;
+    let googleEvents = config.events.googleCalendarId;
     window.odometerOptions = {
       format: '(,ddd).ddd'
     };
