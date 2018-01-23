@@ -21,16 +21,21 @@ $light-brown : #ddcebb;
 $light-green: #aacec4;
 $site-font: "Champagne & Limousines" !important;
 
-* {
+html {
   box-sizing: border-box;
+  font-family: $site-font, "Helvetica", sans-serif;
+}
+
+* {
+  box-sizing: inherit;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-kerning: auto;
 }
 
-html {
-  font-family: $site-font, "Helvetica", sans-serif;
+*:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -85,7 +90,7 @@ a:hover {
 *   Navbar
 -----------------------------------------------*/
 
-nav{
+nav {
   background-color: $light-green;
   box-sizing: border-box;
   opacity: .95;
@@ -207,14 +212,12 @@ nav{
   font-size: 100px;
   padding:30px;
   width: 40%;
-
   #staySquare {
     border: 4px solid #000000;
     display: flex;
     height: 200px;
     margin: 0 auto;
     width: 100%;
-
     img {
       box-sizing: content-box;
       display: inline-block;
@@ -230,7 +233,6 @@ nav{
   background-color: $beige;
   padding: 20px;
   width: 65%;
-
   img {
     display: flex;
     height: 220px;
@@ -246,7 +248,6 @@ nav{
   padding-top: 50px;
   justify-content: center;
   -webkit-flex-flow: row wrap;
-
   .circle {
     border: 8px solid $light-green;
     border-radius: 1000px;
@@ -352,7 +353,7 @@ nav{
       }
     }
   }
-  #contactInfo{
+  #contactInfo {
     font-family: $site-font;
     border: none;
     float: left;
@@ -423,7 +424,7 @@ nav{
 /*-----------------------------------------------
 *   fullCalendar styles
 -----------------------------------------------*/
-#calendarWrapper{
+#calendarWrapper {
   box-sizing: border-box;
   float: left;
   padding-top: 50px;
@@ -595,8 +596,6 @@ nav{
     background-color: $light-green;
     color: #FFFFFF;
   }
-
-
 }
 
 
@@ -624,7 +623,7 @@ nav{
 /*-----------------------------------------------
 *   Landing Page Footer
 -----------------------------------------------*/
-footer{
+footer {
   background-color: $light-green;
   height:120px;
 }
