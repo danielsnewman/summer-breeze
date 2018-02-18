@@ -597,6 +597,30 @@ nav {
     color: #FFFFFF;
   }
 }
+.errors {
+  background-color: $beige;
+  border: solid 1px red;
+  float: right;
+  position: relative;
+  top: -300px;
+  right: 340px;
+  height: 300px;
+  width: 280px;
+}
+.flash {
+  background: white;
+  color: black;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 3px;
+  display: -ms-flexbox;
+  display: flex;
+  animation: slideIn forwards .1s ease-in-out 2;
+  animation-timing-function: cubic-bezier(0.01, 1.68, 0.58, 1);
+}
 
 
 /*-----------------------------------------------

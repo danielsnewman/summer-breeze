@@ -1,24 +1,35 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../public/index.html'));
+  res.render('index');
 });
 
 router.get('/amenities', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../public/amenities.html'));
+  res.render('amenities');
 });
 
 router.get('/availibility', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../public/availibility.html'));
+  res.render('availibility');
 });
 
-router.post('/availibility', (req, res) => {
-  req.check('name', 'Name must be longer than 2 letters').isLength({min:2});
-  req.check('email','Must be a valid email').isEmail();
-  let errors = req.validationErrors();
-  console.log(errors);
+router.post('/availibility', (req, res, next) => {
+  req.sanitizeBody('name');
+  req.checkBody('name', 'You must supply a name').notEmpty();
+  req.checkBody('email', 'That email is not valid').isEmail();
+  req.sanitizeBody('email').normalizeEmail({
+    remove_dots: false,
+    remove_extension: false,
+    gmail_remove_subaddress: false
+  });
+  req.checkBody('guestCount', 'Please supply a number of guests').notEmpty();
+  const errors = req.validationErrors();
+    if(errors) {
+      req.flash('error', errors.map(err => err.msg));
+      console.log(errors);
+    return;
+  }
+  next();
 });
 
 

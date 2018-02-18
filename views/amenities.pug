@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Summer Breeze | Accomidations 
+    link(rel='stylesheet', type='text/css', href='css/normalize.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css')
+    link(rel='stylesheet', type='text/css', href='css/build/main.css')
+    title Accomidations
+  header#acc-hero
+    nav
+      #navLeft
+        .icon
+          a(href='/availibility') Rates & Availability
+        .icon
+          a(href='/amenities') Amenities
+      #navRight
+        .icon To Do
+        .icon About 
+    a(href='/')
+      #logo
+      a
+  section#acc-gallery-wrapper
+    #accomidationsLogo
+    #lightgallery
+      a(href='img/den1.jpg')
+        img.thumb(src='img/den1-thumb.jpg')
+      a(href='img/den2.jpg')
+        img.thumb(src='img/den2-thumb.jpg')
+      a(href='img/kitchen.jpg')
+        img.thumb(src='img/kitchen-thumb.jpg')
+      a(href='img/den3.jpg')
+        img.thumb(src='img/den3-thumb.jpg')
+      a(href='img/master_bed.jpg')
+        img.thumb(src='img/master_bed.jpg')
+      a(href='img/master_bath.jpg')
+        img.thumb(src='img/master_bath.jpg')
+      a(href='img/bunk_bed.jpg')
+        img.thumb(src='img/bunk_bed.jpg')
+      a(href='img/master_patio.jpg')
+        img.thumb(src='img/master_patio.jpg')
+      a(href='img/pullout_bed.jpg')
+        img.thumb(src='img/pullout_bed.jpg')
+  body
+    script(src='https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js')
+    script.
+      lightGallery(document.getElementById('lightgallery'));

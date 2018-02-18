@@ -1,0 +1,191 @@
+doctype html
+html
+  head
+    title Summer Breeze | Availibility 
+    link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css')
+    link(rel='stylesheet', type='text/css', href='https://bootswatch.com/3/yeti/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css')
+    link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css')
+    link(rel='stylesheet', href='js/libs/fullcalendar.css')
+    link(rel='stylesheet', href='js/libs/angular-stepper.min.css')
+    link(rel='stylesheet', type='text/css', href='css/build/main.css')
+  body
+    header#acc-hero
+      nav
+        #navLeft
+          .icon
+            a(href='/availibility') Rates & Availibility
+          .icon
+            a(href='/amenities') Amenities
+        #navRight
+          .icon To Do
+          .icon About 
+      a(href='/')
+        #logo
+        a
+    section#rates-calendar-wrapper
+      #calendarWrapper
+        #calendar.override-font-color
+      #tableWrapper
+        table
+          tr
+            th
+              b
+                | Rates
+                b
+            th
+              b
+                | Weekly
+                b
+          tr
+            td
+              b
+                | Fall/Winter 
+                script.
+                  document.write(new Date().getFullYear())
+              br
+              |     Oct 23 - Mar 3, 
+              script.
+                document.write(new Date().getFullYear())
+              br
+              |     4 night min stay
+            td
+              b
+                | $2,100
+                b
+          tr
+            td
+              b
+                | Spring 
+                script.
+                  document.write(new Date().getFullYear())
+              br
+              |     Mar 4 - May 12, 
+              script.
+                document.write(new Date().getFullYear())
+              br
+              |     4 night min stay
+            td
+              b
+                | $2,900
+                b
+          tr
+            td
+              b
+                | Summer 
+                script.
+                  document.write(new Date().getFullYear())
+              br
+              |     May 13 - Aug 11, 
+              script.
+                document.write(new Date().getFullYear())
+              br
+              |     7 night min stay
+            td
+              b
+                | $3,995
+                b
+      #additionalInfo
+        h3 Additional information about rental rates
+        h3 Fees:
+        ul
+          li  Refundable damage deposit: $500
+          li  Cleaning Fee: $245 
+          li  Tax rate: 11.5% 
+        h3  Additional Notes 
+        ul
+          li
+            | Complementary beach chairs with an umbrella for two will be set up for you every day adjacent to Dune Walkover #7 between March 1 and September 30.
+          li  Must be 30 years old to rent.
+          li  Rates are based on a weekly rate that run Saturday through Saturday.
+          li  Check in time : 4pm 
+          li  Check out time : 10am 
+      #estimator-wrapper(ng-app='priceEstimator')
+        h3  Price Estimator
+        h4  (additional fees included)
+        div(ng-controller='weekStepper')
+          div(ng-controller='dayStepper')
+            div(ng-controller='seasonSelector')
+              #numberContainer
+                ng-odometer(value='(seasonsList.weekRate * weeks) + (seasonsList.dayRate * day)')
+              p  Select a season:
+              select(ng-model='seasonsList', ng-options='season as season.label for season in seasons')
+            label Number of weeks:
+            div(min='minWeeks', max='maxWeeks', ng-model='weeks', rn-stepper='')
+            label Number of days:
+            div(min='minDay', max='maxDay', ng-model='day', rn-stepper='')
+    section#bookYourTrip
+      #bookText
+      fieldset#bookingForms
+        form(method='post')
+          #bookingFields
+            label Name
+            input#name.userInfo(name='name', type='text')
+            label Email
+            input#email.userInfo(name='email', type='text')
+            label Guests
+            input#guestCount.userInfo(name='guestCount', type='number', min='1', max='8')
+            label Date
+            input#dateRange.userInfo(name='dateRange', type='text')
+          input(type='submit', value='Request to Book')
+          if locals.flashes
+              .errors
+                - const categories = Object.keys(locals.flashes)
+                each category in categories
+                  each message in flashes[category]
+                    .flash
+                      p message
+    section#contactUs
+      #contactLogo
+      #form-wrapper
+        #question
+          h2  Still have a question?
+          h4  Send us a message below and we'll get back to you shortly!
+        fieldset#contactInfo
+          form(method='post')
+            #formLeft
+              label  Name 
+              input#name.userInfo(name='name', type='text')
+              label  Email
+              input#email.userInfo(name='email', type='text')
+              label  Phone 
+              input#phone.userInfo(name='phone', type='text')
+            #formRight
+              label#message  Message 
+              textarea#messageField(type='text')
+              input(type='submit')
+              div
+    footer
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js')
+    script(src='js/libs/jquery.min.js')
+    script(src='js/libs/moment.min.js')
+    script(src='https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js')
+    script(src='js/libs/angular-stepper.min.js')
+    script(src='js/libs/angular-odometer.min.js')
+    script(src='js/libs/fullcalendar.js')
+    script(src='js/libs/gcal.js')
+    script(src='js/angularEstimator.js')
+    script(src='js/config.js')
+    script.
+      $(document).ready(function() {
+      let googleKeys = config.googleCalendarApiKey;
+      let googleEvents = config.events.googleCalendarId;
+      window.odometerOptions = {
+        format: "(,ddd).ddd"
+        };
+      $("input[name='dateRange']").daterangepicker();
+      $("#calendar").fullCalendar({
+        themeSystem: "bootstrap3",
+        header: {
+        left: "prev,next today myCustomButton",
+        center: "title",
+        right: "month,agendaWeek,agendaDay"
+        },
+      textColor: "#FFF",
+      googleCalendarApiKey: googleKeys,
+        events: {
+        googleCalendarId: googleEvents
+        }
+      });
+      });
