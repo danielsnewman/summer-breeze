@@ -631,12 +631,66 @@ nav {
   padding: 0 100px 0 100px;
   text-align: center;
   #accomidationsLogo {
-    background-image:url("../../img/accomidations.png");
+    background-image: url("../../img/accomidations.png");
     background-repeat: no-repeat;
     background-size: 100%;
     height: 150px;
     margin: 0 auto;
     width: 750px;
+  }
+  #details {
+    display: flex;
+    margin: 0 auto;
+    height: auto;
+    width: 90%;
+    .amenityDetails {
+      background-color: white;
+      height:160px;
+      width:200px;
+      text-align: center;
+      .amenityIcon {
+        margin: 0 auto;
+        max-height:50px;
+        max-width: 50px;
+        padding-top: 50px;
+        .amenityText {
+          margin: 0 auto;
+          font-family: $site-font;
+          font-size: 1.1em;
+          p {
+            margin: 5px;
+          }
+          p:last-child {
+            font-size: 1.3em;
+          }
+        }
+      }
+      #amenityIcon0 {
+        background-image:url("../../img/house.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      #amenityIcon1 {
+        background-image:url("../../img/people.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      #amenityIcon2 {
+        background-image:url("../../img/bed.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      #amenityIcon3 {
+        background-image:url("../../img/bathroom.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      #amenityIcon4 {
+        background-image:url("../../img/sleep.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+    }
   }
   .thumb {
     max-height: 150px;

@@ -22,6 +22,15 @@ html
       a
   section#acc-gallery-wrapper
     #accomidationsLogo
+    #details
+      - for(var x = 0; x < 5; x++)
+        -var text = ["House", "Sleeps", "Bedrooms", "Bathrooms", "Minimum Stay"]
+        -var num = ["2,400 sq. ft.", "10", "4", "4", "4-7 nights"]
+        div(class="amenityDetails")
+          div(class= "amenityIcon" id="amenityIcon" + x)
+            div(class="amenityText")
+              p= text[x] 
+              p= num[x] 
     #lightgallery
       a(href='img/den1.jpg')
         img.thumb(src='img/den1-thumb.jpg')
