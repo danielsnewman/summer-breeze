@@ -6,8 +6,8 @@ html
     link(rel='stylesheet', type='text/css', href='css/normalize.css')
     link(rel='stylesheet', href='https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css')
     link(rel='stylesheet', type='text/css', href='css/build/main.css')
-    title Accomidations
-  header#acc-hero
+    title Amenities
+  header#amenities-hero
     nav
       #navLeft
         .icon
@@ -22,16 +22,24 @@ html
       a
   section#acc-gallery-wrapper
     #accomidationsLogo
+    h2 Details
+    hr
     #details
       - for(var x = 0; x < 5; x++)
         -var text = ["House", "Sleeps", "Bedrooms", "Bathrooms", "Minimum Stay"]
         -var num = ["2,400 sq. ft.", "10", "4", "4", "4-7 nights"]
         div(class="amenityDetails")
           div(class= "amenityIcon" id="amenityIcon" + x)
-            div(class="amenityText")
-              p= text[x] 
-              p= num[x] 
-    #lightgallery
+          div(class="amenityText")
+            p= text[x] 
+            p= num[x] 
+    hr
+    h2 Photo Gallery 
+    #lightGallery
+      a(href='img/house_front.jpg')
+        img.thumb(src='img/house_front.jpg')
+      a(href='img/ocean_view1.jpg')
+        img.thumb(src='img/ocean_view1.jpg')
       a(href='img/den1.jpg')
         img.thumb(src='img/den1-thumb.jpg')
       a(href='img/den2.jpg')
@@ -42,15 +50,23 @@ html
         img.thumb(src='img/den3-thumb.jpg')
       a(href='img/master_bed.jpg')
         img.thumb(src='img/master_bed.jpg')
+      a(href='img/walkover.jpg')
+        img.thumb(src='img/walkover.jpg')
       a(href='img/master_bath.jpg')
         img.thumb(src='img/master_bath.jpg')
+      a(href='img/guest_bed.jpg')
+        img.thumb(src='img/guest_bed.jpg')
+      a(href='img/Meeting House.jpg')
+        img.thumb(src='img/Meeting House.jpg')
       a(href='img/bunk_bed.jpg')
         img.thumb(src='img/bunk_bed.jpg')
       a(href='img/master_patio.jpg')
         img.thumb(src='img/master_patio.jpg')
       a(href='img/pullout_bed.jpg')
         img.thumb(src='img/pullout_bed.jpg')
+      a(href='img/carillon-downtown.jpg')
+        img.thumb(src='img/carillon-downtown.jpg')
   body
     script(src='https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js')
     script.
-      lightGallery(document.getElementById('lightgallery'));
+      lightGallery(document.getElementById('lightGallery'));

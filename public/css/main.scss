@@ -175,6 +175,7 @@ nav {
   height: 500px;
 }
 
+
 /*-----------------------------------------------
 *   About Us
 -----------------------------------------------*/
@@ -184,18 +185,23 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
+  height: 650px;
   padding-top: 40px;
   #sb-Info {
     color: #FFFFFF;
     box-sizing: border-box;
     font-family: $site-font;
-    font-size: 1.125em;
     height: auto;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
     width: 960px;
+    h2 {
+      font-size: 1.8em;
+    }
+    h3 {
+      font-size: 1.3em;
+    }
   }
 }
 
@@ -421,6 +427,19 @@ nav {
     width:50px;
   }
 }
+
+
+/*-----------------------------------------------
+*   Hero Amenities
+-----------------------------------------------*/
+#amenities-hero {
+  background-image: url("../../img/master_bed.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+
+}
 /*-----------------------------------------------
 *   fullCalendar styles
 -----------------------------------------------*/
@@ -630,17 +649,29 @@ nav {
   height:500px;
   padding: 0 100px 0 100px;
   text-align: center;
+  hr {
+    border: .5px solid black;
+    margin: 10px 0px 20px;
+  }
   #accomidationsLogo {
     background-image: url("../../img/accomidations.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 150px;
+    height: 100px;
     margin: 0 auto;
+    margin-bottom: 30px;
     width: 750px;
+  }
+  h2 {
+    font-family: $site-font;
+    font-size: 1.6em;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
   #details {
     display: flex;
     margin: 0 auto;
+    margin-bottom: 0px;
     height: auto;
     width: 90%;
     .amenityDetails {
@@ -653,18 +684,22 @@ nav {
         max-height:50px;
         max-width: 50px;
         padding-top: 50px;
-        .amenityText {
-          margin: 0 auto;
-          font-family: $site-font;
+      .amenityText {
+        margin: 0 auto;
+        font-family: $site-font;
+        font-size: 1.1em;
+        text-align: center;
+        width: 100%;
+        p {
           font-size: 1.1em;
-          p {
-            margin: 5px;
-          }
-          p:last-child {
-            font-size: 1.3em;
-          }
+          margin: 5px;
+        }
+        p:last-child {
+          margin: 0 auto;
+          font-size: 2.0em;
         }
       }
+    }
       #amenityIcon0 {
         background-image:url("../../img/house.png");
         background-size: 100%;
@@ -691,6 +726,9 @@ nav {
         background-repeat: no-repeat;
       }
     }
+  }
+  #lightGallery a {
+    margin: 0px 5px 10px;
   }
   .thumb {
     max-height: 150px;
