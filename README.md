@@ -2,7 +2,7 @@
 
 Website for the Summer Breeze vacation home in Panama City Beach, Florida which establishes direct contact between vacation home owners and their clientele base in place of doing business through AirBnB or VRBO.
 
-## Resources
+## Technology Used
 <ul>
 <li><a href = "https://angularjs.org/"> AngularJS</a></li>
 <li><a href = "https://gruntjs.com/"> Grunt</a></li>
