@@ -28,8 +28,8 @@ Website for the Summer Breeze vacation home in Panama City Beach, Florida which 
 This project is still in development, but if you'd like to download this repo and run it locally, here is how to do it:
 
 ### Get the source code
-`git clone git@github.com:https://github.com/danielsnewman/summer-breeze.git` <br>
-`cd summer-breeze`
+`$ git clone git@github.com:https://github.com/danielsnewman/summer-breeze.git` <br>
+`$ cd summer-breeze`
 
 ### Install Node 
 Windows: <br>
@@ -40,16 +40,16 @@ NodeJS v9.7.1 (https://nodejs.org/dist/v9.7.1/node-v9.7.1.pkg)
 
 
 ### Install npm
-`npm install npm@latest -g`
+`$ npm install npm@latest -g`
 
 ### Install Grunt-cli
-`npm install -g grunt-cli`
+`$ npm install -g grunt-cli`
 
 ### Install Sass
-`gem install sass`
+`$ gem install sass`
 
 ### Install all node module dependencies 
-`npm install`
+`$ npm install`
 
 ### Run Grunt tasks and Express Server
-`grunt`
+`$ grunt`
