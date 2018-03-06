@@ -32,7 +32,11 @@ This project is still in development, but if you'd like to download this repo an
 `cd summer-breeze`
 
 ### Install Node 
+Windows:
 NodeJS v9.7.1 (https://nodejs.org/dist/v9.7.1/node-v9.7.1.pkg)
+
+Mac:
+NodeJS v9.7.1 (https://nodejs.org/dist/v8.9.4/node-v8.9.4-x86.msi)
 
 ### Install npm
 `npm install npm@latest -g`
