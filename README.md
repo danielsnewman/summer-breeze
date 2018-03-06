@@ -10,7 +10,9 @@ Website for the Summer Breeze vacation home in Panama City Beach, Florida which 
 <li><a href = "https://momentjs.com/"> Moment.js</a></li>
 <li><a href = "https://flickity.metafizzy.co"> Flickity</a></li>
 <li><a href = "https://flexbox.io/"> Flexbox</a></li>
-<li><a href = "https://www.npmjs.com/"> npm</a></li>
+<li><a href = "https://nodejs.org/en/"> NodeJS</a></li>
+<li><a href = "https://nodejs.org/en/"> Express</a></li>
+<li><a href = "https://expressjs.com/"> npm</a></li>
 <li><a href = "https://github.com/fullcalendar"> fullCalendar.io</a></li>
 </ul>
 
