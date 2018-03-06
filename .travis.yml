@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  -"9.2.0"
+
+branches:
+  only:
+    -master
+
+before_install:
+  - npm install -g grunt-cli
+
+install: npm install
+
+before_script:
