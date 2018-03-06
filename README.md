@@ -48,8 +48,8 @@ NodeJS v9.7.1 (https://nodejs.org/dist/v9.7.1/node-v9.7.1.pkg)
 ### Install Sass
 `gem install sass`
 
-## Install all node module dependencies 
+### Install all node module dependencies 
 `npm install`
 
-## Run Grunt tasks and Express Server
+### Run Grunt tasks and Express Server
 `grunt`
