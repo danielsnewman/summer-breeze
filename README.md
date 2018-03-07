@@ -28,7 +28,7 @@ Website for the Summer Breeze vacation home in Panama City Beach, Florida which 
 This project is still in development, but if you'd like to download this repo and run it locally, here is how to do it:
 
 ### Get the source code
-`$ git clone git@github.com:https://github.com/danielsnewman/summer-breeze.git` <br>
+`$ git clone https://github.com/danielsnewman/summer-breeze.git` <br>
 `$ cd summer-breeze`
 
 ### Install Node 
