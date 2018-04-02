@@ -9,8 +9,9 @@
 /*-----------------------------------------------
 *    Vendor - Default fall-backs and external files
 -----------------------------------------------*/
-@import "_normalize.scss";
-@import "_mixins.scss";
+@import "_normalize";
+@import "_variables";
+@import "_mixins";
 
 /*-----------------------------------------------
 *   Base
@@ -416,7 +417,9 @@ nav {
     resize: none;
     width: 100%;
   }
-
+  .bookingLabel {
+  color: white !important;
+  }
   label {
     display: block;
     color: #000000;
@@ -446,6 +449,7 @@ nav {
 #calendarWrapper {
   box-sizing: border-box;
   float: left;
+  margin-bottom: 60px;
   padding-top: 50px;
   padding-left: 30px;
   height: 600px;
@@ -462,7 +466,7 @@ nav {
 *   Rates & Amenities
 -----------------------------------------------*/
 #rates-calendar-wrapper {
-  height: 1200px;
+  height: 1250px;
   #tableWrapper {
     box-sizing: border-box;
     height: 610px;
@@ -597,6 +601,7 @@ nav {
     float: left;
     font-size: 1.2em;
     margin-top: 10px;
+    color: #FFFFFF;
   }
   label:hover {
     text-decoration: none;

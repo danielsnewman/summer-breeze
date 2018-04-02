@@ -25,11 +25,16 @@ router.post('/availibility', (req, res, next) => {
   req.checkBody('guestCount', 'Please supply a number of guests').notEmpty();
   const errors = req.validationErrors();
     if(errors) {
-      req.flash('error', errors.map(err => err.msg));
-      console.log(errors);
+      // return res.json(errors);
+    } else {
+      res.render('index');
+    }
     return;
-  }
   next();
+});
+
+router.get('/toDo', (req, res) => {
+  res.render('toDo');
 });
 
 

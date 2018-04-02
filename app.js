@@ -3,7 +3,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const routes = require('./routes/index');
-const flash = require('connect-flash');
 const errorHandlers = require('./handlers/errorHandlers');
 const expressValidator = require('express-validator');
 const session = require('express-session');
@@ -26,16 +25,7 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-app.use(flash());
-
-app.use((req, res, next) => {
-  res.locals.flashes = req.flash();
-  res.locals.currentPath = req.path;
-  next();
-});
-
 app.use('/', routes);
-
 
 
 module.exports = app;

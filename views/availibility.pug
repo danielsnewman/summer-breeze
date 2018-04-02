@@ -18,8 +18,10 @@ html
           .icon
             a(href='/amenities') Amenities
         #navRight
-          .icon To Do
-          .icon About 
+          .icon
+            a(href='/toDo') To Do
+          .icon 
+            a(href='/About') About
       a(href='/')
         #logo
         a
@@ -117,25 +119,21 @@ html
     section#bookYourTrip
       #bookText
       fieldset#bookingForms
-        form(method='post')
+        form(method='POST')
           #bookingFields
-            label Name
+            label.bookingLabel Name
             input#name.userInfo(name='name', type='text')
-            label Email
+
+            label.bookingLabel Email
             input#email.userInfo(name='email', type='text')
-            label Guests
+
+            label.bookingLabel Guests
             input#guestCount.userInfo(name='guestCount', type='number', min='1', max='8')
-            label Date
+
+            label.bookingLabel Date
             input#dateRange.userInfo(name='dateRange', type='text')
-          input(type='submit', value='Request to Book')
-          if locals.flashes
-              .errors
-                - const categories = Object.keys(locals.flashes)
-                each category in categories
-                  each message in flashes[category]
-                    .flash(class=`flash--${category}`)
-                      p.flash__text!= message
-                      button.flash__remove(onClick="this.parentElement.remove()") &times;
+
+          input#submitButton(type='submit', value='Request to Book')
     section#contactUs
       #contactLogo
       #form-wrapper
@@ -167,6 +165,7 @@ html
     script(src='js/libs/fullcalendar.js')
     script(src='js/libs/gcal.js')
     script(src='js/angularEstimator.js')
+    script(src='js/ajaxForms.js')
     script(src='js/config.js')
     script.
       $(document).ready(function() {
