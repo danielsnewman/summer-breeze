@@ -21,7 +21,7 @@ html
           .icon
             a(href='/todo') To Do
           .icon 
-            a(href='/About') About
+            a(href='/about') About
       a(href='/')
         #logo
         a
@@ -122,16 +122,16 @@ html
         form(method='POST')
           #bookingFields
             label.bookingLabel Name
-            input#name.userInfo(name='name', type='text')
+            input#name.userInfo(required name='name', type='text')
 
             label.bookingLabel Email
-            input#email.userInfo(name='email', type='text')
+            input#email.userInfo(required name='email', type='email')
 
             label.bookingLabel Guests
-            input#guestCount.userInfo(name='guestCount', type='number', min='1', max='8')
+            input#guestCount.userInfo(required name='guestCount', type='number', min='1', max='8')
 
             label.bookingLabel Date
-            input#dateRange.userInfo(name='dateRange', type='text')
+            input#dateRange.userInfo(required name='dateRange', type='text')
 
           input#submitButton(type='submit', value='Request to Book')
           
@@ -145,14 +145,14 @@ html
           form(method='post')
             #formLeft
               label  Name 
-              input#name.userInfo(name='name', type='text')
+              input#name.userInfo(required name='name', type='text')
               label  Email
-              input#email.userInfo(name='email', type='text')
+              input#email.userInfo(required name='email', type='email')
               label  Phone 
-              input#phone.userInfo(name='phone', type='text')
+              input#phone.userInfo(required name='phone', type='text')
             #formRight
               label#message  Message 
-              textarea#messageField(type='text')
+              textarea#messageField(required type='text')
               input(type='submit')
               div
     footer
@@ -166,7 +166,7 @@ html
     script(src='js/libs/fullcalendar.js')
     script(src='js/libs/gcal.js')
     script(src='js/angularEstimator.js')
-    script(src='js/ajaxForms.js')
+    script(src='js/validateForms.js')
     script(src='js/config.js')
     script.
       $(document).ready(function() {
