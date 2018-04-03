@@ -9,11 +9,11 @@ router.get('/amenities', (req, res) => {
   res.render('amenities');
 });
 
-router.get('/availibility', (req, res) => {
-  res.render('availibility');
+router.get('/availability', (req, res) => {
+  res.render('availability');
 });
 
-router.post('/availibility', (req, res, next) => {
+router.post('/availability', (req, res, next) => {
   req.sanitizeBody('name');
   req.checkBody('name', 'You must supply a name').notEmpty();
   req.checkBody('email', 'That email is not valid').isEmail();
@@ -33,7 +33,7 @@ router.post('/availibility', (req, res, next) => {
   next();
 });
 
-router.get('/toDo', (req, res) => {
+router.get('/todo', (req, res) => {
   res.render('toDo');
 });
 
