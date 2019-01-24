@@ -1,6 +1,5 @@
 # Summer Breeze
 
-*Project on hold*
 Website for the Summer Breeze vacation home in Panama City Beach, Florida which establishes direct contact between vacation home owners and their clientele base in place of doing business through AirBnB or VRBO.
 
 ## Technology Used
@@ -26,7 +25,7 @@ Website for the Summer Breeze vacation home in Panama City Beach, Florida which 
 ## Development 
 
 ### Setting up development environment
-This project is still in development, but if you'd like to download this repo and run it locally, here is how to do it:
+This project is currently on hold and pending future development, but if you'd like to download this repo and run it locally, here is how to do it:
 
 ### Get the source code
 `$ git clone https://github.com/danielsnewman/summer-breeze.git` <br>
