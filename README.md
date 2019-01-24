@@ -1,5 +1,6 @@
-# Summer Breeze *PROJECT ON HOLD*
+# Summer Breeze
 
+*Project on hold*
 Website for the Summer Breeze vacation home in Panama City Beach, Florida which establishes direct contact between vacation home owners and their clientele base in place of doing business through AirBnB or VRBO.
 
 ## Technology Used
